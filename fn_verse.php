@@ -131,14 +131,13 @@ function get_has_title($filename)
 
 function get_verse_title($filename)
 {
-
   mb_internal_encoding('UTF-8');
 
   $handle = fopen($filename, "rb");
   $contents = fread($handle, filesize($filename));
   fclose($handle);
 
-  $contents = mb_convert_encoding($contents, "UTF-8", "Windows-1251");
+  // $contents = mb_convert_encoding($contents, "UTF-8", "Windows-1251");
 
 
   $crlf = "\x0A";
